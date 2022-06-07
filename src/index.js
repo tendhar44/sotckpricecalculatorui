@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './styles/index.css';
+// import App from './App';
+// import ShoppingList from './shoplist';
+import StockPriceCalculator from './stockcalc';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <ShoppingList name="Mark" /> */}
+    <StockPriceCalculator />
   </React.StrictMode>
 );
 

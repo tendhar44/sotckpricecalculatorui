@@ -1,0 +1,73 @@
+.spc-main-body {
+    background-color: #69696f;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    font-size: calc(5px + 2vmin);
+}
+
+.spc-div-1-topleft {
+    text-align: left;
+    padding-right: 200px;
+    margin-top: 50px;
+}
+
+.spc-ui-1-topleft {
+    list-style: none;
+    margin-left: -35px;
+}
+
+.spc-li-avgprice-result {
+    margin-left: 10px;
+    color: red;
+}
+
+.spc-li-shares-result {
+    margin-left: 10px;
+    color: red;
+}
+
+.spc-button {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+  }
+  
+.spc-button:hover {background-color: #e7e7e7;}
+
+.spc-div-2-topright {
+    text-align: center;
+}
+
+/* .spc-enterprice-label {
+    vertical-align: text-top;
+    color: blue;
+} */
+
+/* .spc-enterprice-div {
+
+}
+
+.spc-entershares-div {
+
+} */
+
+.spc-entersharesprice-div {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+}
