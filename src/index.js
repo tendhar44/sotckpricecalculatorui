@@ -11,6 +11,8 @@ import allReducer from './reducers';
 import ReduxTest from './reduxtest';
 import { Provider } from 'react-redux'
 import FootNote from './footnote';
+import FormTest from './formtest';
+import Slider from './slider';
 
 const store = configureStore({reducer: allReducer});
 // const store = configureStore();
@@ -19,15 +21,18 @@ const store = configureStore({reducer: allReducer});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
     {/* <App /> */}
     {/* <ShoppingList name="Mark" /> */}
     <Nav />
+    <Slider />
     <StockPriceCalculator />
     {/* <Provider store={store}>
       <ReduxTest />
     </Provider>
     <FootNote /> */}
+    <FootNote />
   </React.StrictMode>
 );
 

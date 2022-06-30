@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './styles/stockcalc.css';
 import axios from 'axios'
 
-class StockPriceCalculator extends React.Component {
+class StockPriceCalculator extends Component {
 
     constructor(props) {
         super(props);
@@ -11,6 +11,8 @@ class StockPriceCalculator extends React.Component {
         //bind all the method, since we are using "this" inside the method
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        //can bind also by changing the function to arrow, funcEx = () => {}
+        //that way you don't even need constructor and bind
     }
 
     handleChange(e) {
