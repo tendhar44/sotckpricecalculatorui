@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './styles/stockcalc.css';
 import axios from 'axios'
+import CalcLadderTable from './calcladdertable'
 
 class StockPriceCalculator extends Component {
 
@@ -37,13 +38,6 @@ class StockPriceCalculator extends Component {
     }
 
     render() {
-
-        const data = [
-            {pandl: 4.55, price: 12.45, value: 293.5}, 
-            {pandl: 4.45, price: 12.44, value: 283.5},
-            {pandl: 4.35, price: 12.43, value: 273.5}
-        ]
-
         /*{
             "assetType": "EQUITY", "assetMainType": "EQUITY", "cusip": "69608A108", 
             "assetSubType": "", "symbol": "PLTR", 
@@ -136,51 +130,7 @@ class StockPriceCalculator extends Component {
                     </div>
                 </div>
                 <br></br>
-                <div className='spc-price-calc-container'>
-                    <div id='spc-entersharesprice-div'>
-                        <div id='spc-enterprice-div'>
-                            <br></br>
-                            <input type="number" step="0.001" className='spc-all-inputs' id="spc-enterprice-id" placeholder="PRICE" name="enterprice"></input>
-                            <br></br>
-                        </div>
-                        <div id='spc-entershares-div'>
-                            <br></br>
-                            <input type="number" className='spc-all-inputs' id="spc-entershares-id" placeholder="SHARES" name="entershares"></input>
-                            <br></br>
-                        </div>
-                    </div>
-                    <input type="submit" value="get" className='spc-button'></input>
-                </div>
-                <div className='spc-ui-sharesprice-column'>
-                    <span className='spc-ui-stats'>Avg Price:</span> 
-                    <span className='spc-all-result'>12.45</span>
-                    &nbsp; &nbsp;
-                    <span className='spc-ui-stats'>Shares:</span> 
-                    <span className='spc-all-result'>50</span>
-                </div>
-                <div className='spc-div-3-bottomtable'>
-                    <table>
-                        <tr>
-                            <th className="spc-first-sec-table-header">P&L</th>
-                            <th className="spc-first-sec-table-header">PRICE</th>
-                            <th className="spc-first-sec-table-header" id="spc-third-table-header">VALUE</th>
-                        </tr>
-                        {data.map((x, y) => {
-                            return (
-                                <tr key={y}>
-                                    <td className="spc-first-sec-table-body">{x.pandl}</td>
-                                    <td className="spc-first-sec-table-body">{x.price}</td>
-                                    <td className="spc-first-sec-table-body" id="spc-third-table-col">{x.value}</td>
-                                </tr>
-                            )
-                        })}
-                        <tr>
-                            <td className='spc-empty-table-body'></td>
-                            <td className='spc-empty-table-body'></td>
-                            <td className='spc-empty-third-table-body'></td>
-                        </tr>
-                    </table>
-                </div>
+                <CalcLadderTable />
             </div>
         );
     }
