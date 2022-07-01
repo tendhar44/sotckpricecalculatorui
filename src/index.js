@@ -13,6 +13,9 @@ import { Provider } from 'react-redux'
 import FootNote from './footnote';
 import FormTest from './formtest';
 import Slider from './slider';
+import TenzForm from './tenzform';
+
+import { BrowserRouter as Router, Route, Routes, Link, Switch } from 'react-router-dom';
 
 const store = configureStore({reducer: allReducer});
 // const store = configureStore();
@@ -22,18 +25,22 @@ const store = configureStore({reducer: allReducer});
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-  <React.StrictMode>
-    {/* <App /> */}
-    {/* <ShoppingList name="Mark" /> */}
-    <Nav />
-    <Slider />
-    <StockPriceCalculator />
-    {/* <Provider store={store}>
+  <Router>
+    <Routes>
+      {/* <App /> */}
+      {/* <ShoppingList name="Mark" /> */}
+      {/*<Provider store={store}>
       <ReduxTest />
-    </Provider>
-    <FootNote /> */}
-    <FootNote />
-  </React.StrictMode>
+      </Provider>
+      <FootNote /> */}
+      <Route path="/" element={<Nav />} />
+      <Route path="/" element={<Slider />} />
+      <Route path="/" element={<StockPriceCalculator />} />
+      <Route path="/" element={<FootNote />} />
+      <Route path="/tenzform" element={<TenzForm />} />
+    </Routes>
+   
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

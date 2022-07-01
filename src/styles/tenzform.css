@@ -1,0 +1,13 @@
+.tenz-form-body {
+    /* covers whole page, margin and padding covers few edges */
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+
+    /* change background color and height and width more responsive */
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+}
