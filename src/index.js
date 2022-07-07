@@ -33,10 +33,14 @@ root.render(
       <ReduxTest />
       </Provider>
       <FootNote /> */}
-      <Route path="/" element={<Nav />} />
-      <Route path="/" element={<Slider />} />
-      <Route path="/" element={<StockPriceCalculator />} />
-      <Route path="/" element={<FootNote />} />
+      <Route path="/" element={ //wrape in fragment <></> for multi components
+        <>
+          <Nav />
+          <Slider />
+          <StockPriceCalculator />
+          <FootNote />
+        </>
+      } />
       <Route path="/tenzform" element={<TenzForm />} />
     </Routes>
    
