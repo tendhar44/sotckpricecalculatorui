@@ -3,6 +3,6 @@
 
 1. get stock quotes through brokeage api, created all the API using Python code in a seperate project.
 
-2. calculate the profits and losses by providing the price and the shares of given asset
+2. show price ladder with profit and loss tracker by providing the price and the shares of given asset.
 
 more to come..
