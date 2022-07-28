@@ -1,9 +1,7 @@
-import counterActions from "./counterActions";
-import isloggedAction from "./isloggedAction";
+import symbolNameAction from "./symbolNameAction";
 
 const allActions = {
-  counterActions,
-  isloggedAction
+  symbolNameAction
 };
 
 export default allActions;

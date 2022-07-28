@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import './styles/slider.css';
 import 'react-alice-carousel/lib/alice-carousel.css';
-// import image1 from './img/stockmarket1.jpg';
-// import image2 from './img/stockmarket2.jpg';
-// import image3 from './img/sp500.jpg';
-// import image4 from './img/inflation.png';
 
 class Slider extends Component {
     constructor() {
@@ -22,10 +18,6 @@ class Slider extends Component {
     componentDidMount() {
         this.autoSlider();
      }
-
-    //  componentDidUpdate () { 
-    //     this.autoSlider(); 
-    //   }
 
     slide1 = document.getElementById("slide-1");
 
@@ -179,11 +171,46 @@ class Slider extends Component {
                         <button className="slider-button" id="s-btn-5" onClick={this.sliderRun}></button>
                     </div>
                     <div className='slider'>
-                        <div className="slide" id="slide-1">1</div>
-                        <div className="slide" id="slide-2">2</div>
-                        <div className="slide" id="slide-3">3</div>
-                        <div className="slide" id="slide-4">4</div>
-                        <div className="slide" id="slide-5">5</div>
+                        <div className="slide" id="slide-1">
+                            <img 
+                                src={require('./img/market-psy.jpg')} 
+                                alt="world exchange"
+                                height="300px"
+                                width="500px"
+                            />
+                        </div>
+                        <div className="slide" id="slide-2">
+                            <img 
+                                src={require('./img/rrr-chart.png')} 
+                                alt="risk reward chart"
+                                height="300px"
+                                width="500px"
+                            />
+                        </div>
+                        <div className="slide" id="slide-3">
+                            <img 
+                                src={require('./img/rrr-chart-two.jpg')} 
+                                alt="risk reward chart 2"
+                                height="300px"
+                                width="500px"
+                            />
+                        </div>
+                        <div className="slide" id="slide-4">
+                            <img 
+                                src={require('./img/ten-command.jpg')} 
+                                alt="inflation chart"
+                                height="300px"
+                                width="500px"
+                            />
+                        </div>
+                        <div className="slide" id="slide-5">
+                            <img 
+                                src={require('./img/vol-liquid.png')} 
+                                alt="sp 500 stock chart"
+                                height="300px"
+                                width="500px"
+                            />
+                        </div>
                     </div>
                     <div>
                         <i id="left-arrow" onClick={this.leftArrowClicked}></i>
@@ -191,7 +218,21 @@ class Slider extends Component {
                     </div>
                 </div>
                 <div className='slider-right'>
-                    ajfksjflajflajf;l
+                <h4>Enter a stock ticker to get quotes..</h4>
+                    APPL<br />
+                    AMZN<br />
+                    MSFT<br />
+                    GOOG<br />
+                    NVDA<br />
+                    BRK.B<br />
+                    UNH<br />
+                    ...
+
+                    <h4>Enter a price and shares you want..</h4>
+                    <p>
+                        you will get profit/loss for each price going 
+                        certian amount of tick, and it's value.
+                    </p>
                 </div>
             </div>
         );
